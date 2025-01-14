@@ -1,0 +1,2 @@
+E:\UnityGames\neue\Bachelor VR Creativity\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+E:\UnityGames\neue\Bachelor VR Creativity\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

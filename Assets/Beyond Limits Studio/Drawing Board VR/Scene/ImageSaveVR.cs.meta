@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4da3f1b4bf75f324fbc01f97a3a46007
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.2
+  assetPath: Assets/Beyond Limits Studio/Drawing Board VR/Scene/ImageSaveVR.cs
+  uploadId: 708023

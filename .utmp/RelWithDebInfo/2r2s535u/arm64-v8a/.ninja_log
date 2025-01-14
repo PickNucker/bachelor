@@ -1,0 +1,19 @@
+# ninja log v5
+83	2263	7548784325101088	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	6fead32429d4cd85
+38	2428	7548784327338408	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	26f3c3a95454f7ab
+124	2245	7548784325356960	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7ea78ef6e37050e2
+20	2145	7548784324190744	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b9640b81f3c2b6b9
+104	2243	7548784324631091	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f812e86e3e730eda
+51	2340	7548784326438087	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	372fdb727dedb15d
+66	2673	7548784329823875	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ddbd8d31af160049
+6	2853	7548784331643888	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b392f624a9600806
+2853	3100	7548784334084147	E:/UnityGames/neue/Bachelor VR Creativity/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2r2s535u/obj/arm64-v8a/libgame.so	6efc7e2ebb4c16e2
+4	1457	7548809267281017	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b9640b81f3c2b6b9
+66	1511	7548809267801775	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	6fead32429d4cd85
+50	1521	7548809267736495	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	372fdb727dedb15d
+99	1649	7548809269227155	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f812e86e3e730eda
+127	1813	7548809270923973	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7ea78ef6e37050e2
+17	1887	7548809271684997	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	26f3c3a95454f7ab
+80	2117	7548809273905000	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ddbd8d31af160049
+32	2348	7548809276305923	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b392f624a9600806
+2349	2551	7548809278337586	E:/UnityGames/neue/Bachelor VR Creativity/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2r2s535u/obj/arm64-v8a/libgame.so	6efc7e2ebb4c16e2

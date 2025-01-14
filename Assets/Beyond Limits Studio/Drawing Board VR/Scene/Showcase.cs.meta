@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c537b231caafe12428b421fa125b8c70
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.2
+  assetPath: Assets/Beyond Limits Studio/Drawing Board VR/Scene/Showcase.cs
+  uploadId: 708023

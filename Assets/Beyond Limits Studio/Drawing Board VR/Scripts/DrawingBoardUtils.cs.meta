@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4aa12c31909fa5942ab5789eb20e3b2e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.2
+  assetPath: Assets/Beyond Limits Studio/Drawing Board VR/Scripts/DrawingBoardUtils.cs
+  uploadId: 708023

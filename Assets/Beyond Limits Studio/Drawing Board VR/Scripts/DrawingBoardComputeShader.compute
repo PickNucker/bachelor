@@ -1,0 +1,151 @@
+#pragma kernel GetPixelsInPolygon
+#pragma kernel SetPixelsInPolygon
+#pragma kernel SetPixelsInRange
+#pragma kernel SetPixelsInRangeOnLine
+#pragma kernel SetTextureColor
+
+RWTexture2D<float4> tex;
+
+RWStructuredBuffer<int2> Result;
+
+RWStructuredBuffer<int2> Corners;
+int CornersCount;
+
+int Width;
+int Height;
+int StartX;
+int StartY;
+int Range;
+
+float4 Line;
+
+float4 Color;
+
+[numthreads(8, 8, 1)]
+void GetPixelsInPolygon(uint3 id : SV_DispatchThreadID)
+{
+    /*float pointX = id.x % Width + StartX;
+    float pointY = id.x / Width + StartY;*/
+
+    float pointX = id.x + StartX;
+    float pointY = id.y+ StartY;
+
+    int polygonLength = Corners.Length;
+    int i = 0;
+    bool inside = false;
+    float startX, startY, endX, endY;
+    int2 endPoint = Corners[Corners.Length - 1];
+    endX = endPoint.x;
+    endY = endPoint.y;
+    while (i < polygonLength)
+    {
+        startX = endX;
+        startY = endY;
+        endPoint = Corners[i++];
+        endX = endPoint.x;
+        endY = endPoint.y;
+        inside = inside ^ ((endY > pointY ^ startY > pointY) && ((pointX - endX) < (pointY - endY) * (startX - endX) / (startY - endY)));
+    }
+
+    if (inside)
+    {
+        int2 index = int2(pointX, pointY);
+
+        tex[index] = Color;
+    }
+}
+
+[numthreads(8, 8, 1)]
+void SetPixelsInPolygon(uint3 id : SV_DispatchThreadID)
+{
+    /*float pointX = id.x % Width + StartX;
+    float pointY = id.x / Width + StartY;*/
+
+    float pointX = id.x + StartX;
+    float pointY = id.y + StartY;
+
+    int polygonLength = CornersCount;
+    int i = 0;
+    bool inside = false;
+    float startX, startY, endX, endY;
+    int2 endPoint = Corners[CornersCount - 1];
+    endX = endPoint.x;
+    endY = endPoint.y;
+    while (i < polygonLength)
+    {
+        startX = endX;
+        startY = endY;
+        endPoint = Corners[i++];
+        endX = endPoint.x;
+        endY = endPoint.y;
+        inside = inside ^ ((endY > pointY ^ startY > pointY) && ((pointX - endX) < (pointY - endY) * (startX - endX) / (startY - endY)));
+    }
+
+    if (inside)
+    {
+        int2 index = int2(pointX, pointY);
+        
+        tex[index] = Color;
+    }
+}
+
+[numthreads(8, 8, 1)]
+void SetPixelsInRange(uint3 id : SV_DispatchThreadID)
+{
+    // float pointX = id.x % (Range * 2) + StartX, pointY = id.x / (Range * 2) + StartY;
+
+    /*float pointX = id.x % Width + StartX;
+    float pointY = id.x / Width + StartY;*/
+
+    float pointX = id.x + StartX;
+    float pointY = id.y + StartY;
+
+    int2 index = int2(pointX, pointY);
+
+    float distanceX = abs(pointX - (StartX + Range));
+    float distanceY = abs(pointY - (StartY + Range));
+
+    float sqrDistance = distanceX * distanceX + distanceY * distanceY;
+
+    if (sqrDistance <= float(Range) * float(Range))
+    {
+        tex[index] = Color;
+    }
+}
+
+[numthreads(8, 8, 1)]
+void SetPixelsInRangeOnLine(uint3 id : SV_DispatchThreadID)
+{
+    /*float pointX = id.x % Width + StartX;
+    float pointY = id.x / Width + StartY;*/
+
+    float pointX = id.x + StartX;
+    float pointY = id.y + StartY;
+
+    float2 line_direction = float2(Line.z, Line.w) - float2(Line.x, Line.y);
+    float line_length = sqrt(line_direction.x * line_direction.x + line_direction.y * line_direction.y);
+    line_direction = line_direction / line_length;
+    float dot_product = dot(float2(pointX, pointY) - float2(Line.x, Line.y), line_direction);
+    float project_length = clamp(dot_product, 0.0, line_length);
+
+    float2 point_on_line = float2(Line.x, Line.y) + line_direction * project_length;
+
+    float d1 = float(pointX - point_on_line.x);
+    float d2 = float(pointY - point_on_line.y);
+
+    if (d1 * d1 + d2 * d2 < Range * Range)
+    {
+        int2 index = int2(pointX, pointY);
+
+        tex[index] = Color;
+    }  
+}
+
+[numthreads(8, 8, 1)]
+void SetTextureColor(uint3 id : SV_DispatchThreadID)
+{
+    int pointX = id.x;
+    int pointY = id.y;
+    int2 index = int2(pointX, pointY);
+    tex[index] = Color;
+}

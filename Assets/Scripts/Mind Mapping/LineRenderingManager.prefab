@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7371845763434549408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5825148916697244714}
+  - component: {fileID: 3589603313031396027}
+  - component: {fileID: 4450341070690350841}
+  m_Layer: 0
+  m_Name: LineRenderingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5825148916697244714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371845763434549408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3635602, y: 1.2312076, z: 0.5318673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3589603313031396027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371845763434549408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1048550460
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &4450341070690350841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371845763434549408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcce193501ce6a6499ba46537cae7aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodePrefab: {fileID: 8938976029935007216, guid: 97760d09ed07fa2498be717f72de816a,
+    type: 3}
+  nodeSpawnPosition: {fileID: 0}
+  playerMenu: {fileID: 0}
+  lineRendererPrefab: {fileID: 6873250297926049618, guid: cdd6f13c4a7cb44478c5bb9faf65c9e7,
+    type: 3}
+  drawLineAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Draw Line
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9582b884-f005-4f30-98f0-e70d136c234b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: e30f2ffd-12c4-4aec-abbc-87c92d5cecee
+        m_Path: <XRController>{LeftHand}/{Grip}
+        m_Interactions: Press
+        m_Processors: 
+        m_Groups: 
+        m_Action: Draw Line
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 22c2ad01-7f04-4c1d-9ec7-25ff26f68c0d
+        m_Path: <XRController>{LeftHand}/{TriggerButton}
+        m_Interactions: Press
+        m_Processors: 
+        m_Groups: 
+        m_Action: Draw Line
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 4116954447336496447, guid: 0be0028c24f2a4c14a96b6aa39055933,
+      type: 3}
+  firstSelectedObject: {fileID: 0}
+  secondObject: {fileID: 0}

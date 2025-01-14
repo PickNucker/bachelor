@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5452e3850af0a9b43bc0cca5e2f0f9b2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253359
+  packageName: Drawing Board VR
+  packageVersion: 1.0.2
+  assetPath: Assets/Beyond Limits Studio/Drawing Board VR/Scripts/Eraser.cs
+  uploadId: 708023
